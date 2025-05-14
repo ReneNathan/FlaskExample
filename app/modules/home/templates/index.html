@@ -2,8 +2,11 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('home.static', filename='css/home.css') }}">
 </head>
 <body>
+    {% include 'include/upper_menu.html' %}
     <h1>Página Inicial</h1>
 </body>
 </html>

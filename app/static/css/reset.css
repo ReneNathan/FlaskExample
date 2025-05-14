@@ -1,0 +1,78 @@
+/* RESET CSS */
+
+/* Remover margens e preenchimento de todos os elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definir a fonte padrão para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Remover links sublinhados e cores de fundo padrão */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remover as margens padrão dos <ul> e <ol> */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remover bordas de tabelas */
+table {
+    border-collapse: collapse;
+}
+
+/* Remover espaços em branco ao redor das imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Normalizar as fontes */
+input,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Remover a aparência padrão dos botões */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remover estilo de borda de campos de formulários */
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
+/* Evitar que a altura dos elementos de formulário seja alterada por alguns navegadores */
+input[type="checkbox"],
+input[type="radio"] {
+    height: auto;
+    width: auto;
+}
+
+/* Adicionar um pouco de espaçamento nos links de navegação */
+a {
+    color: inherit;
+    text-decoration: none;
+}
