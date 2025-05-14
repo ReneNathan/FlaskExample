@@ -1,12 +1,49 @@
+<!-- upper_menu.html -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/upper_menu.css') }}">
 
-<nav id="upper_menu_container">
-  <div id="logo_container">
-  <div>
-  <div id="upper_menu_inner_container">
-    <div id="desktop_upper_menu_container">
+<nav class="navbar">
+  <div class="navbar-container">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Library Logo" class="navbar-logo">
+
+    <!-- Menu Desktop -->
+    <div class="navbar-links">
+      <a href="#" class="nav-item active"><i class="fas fa-home"></i>Home</a>
+      <a href="#" class="nav-item"><i class="fas fa-users"></i>Autores</a>
+      <a href="#" class="nav-item"><i class="fas fa-tags"></i>Gêneros</a>
+      <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i>Relatórios</a>
     </div>
-    <div id="phone_upper_menu_container">
-    </div>
-  <nav>
+
+    <!-- Menu Mobile -->
+    <button class="hamburger" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Menu Mobile Dropdown -->
+  <div class="mobile-menu">
+    <a href="#" class="mobile-item active"><i class="fas fa-home"></i>Home</a>
+    <a href="#" class="mobile-item"><i class="fas fa-users"></i>Autores</a>
+    <a href="#" class="mobile-item"><i class="fas fa-tags"></i>Gêneros</a>
+    <a href="#" class="mobile-item"><i class="fas fa-chart-bar"></i>Relatórios</a>
+  </div>
 </nav>
+
+<script>
+function toggleMenu() {
+  const menu = document.querySelector('.mobile-menu');
+  const hamburger = document.querySelector('.hamburger');
+  menu.classList.toggle('active');
+  hamburger.classList.toggle('is-active');
+}
+
+// Fechar menu ao clicar fora
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.navbar')) {
+    document.querySelector('.mobile-menu').classList.remove('active');
+    document.querySelector('.hamburger').classList.remove('is-active');
+  }
+});
+</script>
