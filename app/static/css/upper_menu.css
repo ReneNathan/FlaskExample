@@ -1,4 +1,7 @@
 /* upper_menu.css */
+
+
+
 :root {
   --primary-color: #2C3E50;
   --secondary-color: #3498DB;
@@ -7,15 +10,16 @@
   --background-light: #F8F9FA;
 }
 
-.navbar {
+.custom_navbar {
   background: var(--primary-color);
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  font-size: 17.6px !important;
 }
 
-.navbar-container {
+.custom_navbar-container {
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -32,16 +36,15 @@
   transform: scale(1.05);
 }
 
-.navbar-links {
+.custom_navbar-links {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-.nav-item {
+.custom_nav-item {
   color: var(--text-light);
   text-decoration: none;
-  font-size: 1.1rem;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -50,12 +53,12 @@
   gap: 0.5rem;
 }
 
-.nav-item:hover {
+.custom_nav-item:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-.nav-item.active {
+.custom_nav-item.active {
   background: var(--accent-color);
   font-weight: 600;
 }
@@ -148,7 +151,7 @@
 
 /* Responsividade */
 @media (max-width: 992px) {
-  .navbar-links {
+  .custom_navbar-links {
     display: none;
   }
 
@@ -168,7 +171,7 @@
     display: none;
   }
 
-  .navbar-container {
+  .custom_navbar-container {
     justify-content: space-between;
   }
 }

@@ -3,11 +3,27 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('home.static', filename='css/home.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     {% include 'include/upper_menu.html' %}
-    <h1>Página Inicial</h1>
+
+    <div id="first_line_container">
+        {% include 'include/carrousel.html' %}
+        <div id="introduction_text_constiner">
+            <span>
+                Em um mundo cada vez mais digital e acelerado, a leitura de livros continua sendo uma das formas mais ricas de desenvolver a imaginação, empatia e pensamento crítico. Na "Tudo em Livros", celebramos o poder das histórias — do terror que arrepia à fantasia que encanta, da ficção que provoca reflexões ao romance que aquece o coração. Ler é escapar, sonhar e se conhecer. Descubra mundos incríveis em cada página e viva experiências que só os livros podem oferecer.
+            </span>
+        </div>
+    </div>
+    <div id="second_line_container">
+        <button class="btn_livro">Pegar um livro!</button>
+        <button class="btn_livro">Devolver um livro!</button>
+    </div>
+
+    {% include 'include/footer.html' %}
 </body>
 </html>
