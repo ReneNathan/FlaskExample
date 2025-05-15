@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="{{ url_for('home.static', filename='css/modal_donate_book.css') }}">
+
+<div id="modal_donate_book" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h2>Doe um livro para nosso acervo!</h2>
+    <hr>
+    <form>
+      <div class="form_item">
+        <label>Nome do livro:</label>
+        <input type="text"></input>
+      </div>
+
+      <div class="form_item">
+        <label>Autor:</label>
+        <select name="cars" id="cars">
+          <option value="" selected disabled>Selecione</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+
+      <div class="form_item">
+        <label>Genêro:</label>
+        <select name="cars" id="cars">
+          <option value="" selected disabled>Selecione</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+
+      <div class="form_item">
+        <label>Ano de publicação:</label>
+        <input type="number"></input>
+      </div>
+
+      <div class="form_item">
+        <label>Quantidade:</label>
+        <input type="number"></input>
+      </div>
+
+      <div id="book_img_container" class="form_item">
+        <div id="fake_book_upload_btn"></div>
+        <div id="image_container">
+          <img src="receber_upload"/>
+        </div>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display:none" />
+      </div>
+
+    </form>
+    <button onclick>Doar</button>
+  </div>
+</div>
+
+<script src="{{ url_for('home.static', filename='js/modal_donate_book.js') }}" crossorigin="anonymous"></script>

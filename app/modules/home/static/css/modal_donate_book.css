@@ -1,0 +1,158 @@
+html.modal-open {
+  overflow-y: hidden;
+}
+
+#modal_donate_book.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal_donate_book.modal-overlay.show {
+  display: flex;
+}
+
+#modal_donate_book .modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.3s ease-out;
+  scale: 1 ;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form_item label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.form_item input[type="text"],
+.form_item input[type="number"],
+.form_item select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.form_item input:focus,
+.form_item select:focus {
+  outline: none;
+  border-color: #4285f4;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+#book_img_container{
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Upload personalizado */
+#fake_book_upload_btn {
+  padding: 0.75rem;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 60%;
+  max-height: fit-content;
+}
+
+#image_container{
+  width: 40%;
+}
+
+#fake_book_upload_btn:hover {
+  background: #e8e8e8;
+}
+
+#image_container {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+#image_container img {
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100px;
+}
+
+/* Botão Fechar */
+.modal-content > button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.modal-content > button:hover {
+  background-color: #3367d6;
+}
+
+/* Botão de fechar (X) */
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #555;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  #modal_donate_book .modal-content{
+    scale: 0.8;
+  }
+}
