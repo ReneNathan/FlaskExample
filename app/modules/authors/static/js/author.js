@@ -9,6 +9,21 @@ $(document).ready(function () {
 
 });
 
+//ativação da table de autores
+$(document).ready(function () {
+  $('#table_autores').DataTable({
+    "pageLength": 5,   // 5 registros por página
+    "language": {
+      "search": "Buscar:",
+      "lengthMenu": "Mostrar _MENU_ registros por página",
+      "zeroRecords": "Nada encontrado",
+      "info": "Mostrando página _PAGE_ de _PAGES_",
+      "infoEmpty": "Nenhum registro disponível",
+      "infoFiltered": "(filtrado de _MAX_ registros no total)"
+    }
+  });
+});
+
 
 function remove_active(menu_itens_list){
   for (let i = 0; i < menu_itens_list.length; i++) {

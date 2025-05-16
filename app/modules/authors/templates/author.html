@@ -2,19 +2,52 @@
 <html>
 <head>
     <title>Autores</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('authors.static', filename='css/author.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     {% include 'include/upper_menu.html' %}
     <main class="content">
-    teste
+        <h1>Registro de autores existentes na base</h1>
+        <button class="btn_add_author">Cadastrar autor</button>
+        <div class="main_container">
+            <table id="table_autores">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Pais</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for autor in autores %}
+                        <tr>
+                            <td>{{ autor.id }}</td>
+                            <td>{{ autor.name }}</td>
+                            <td>{{ autor.country }}</td>
+                            <td class="action_td" data-autor-id="{{ autor.id }}" >
+                                <div class="action_table_menu">
+                                    <i class="fa-solid fa-pen-to-square edit-action"></i>
+                                    <i class="fa-solid fa-trash-can delete-action"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </main>
     {% include 'include/footer.html' %}
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="{{ url_for('authors.static', filename='js/author.js') }}"> </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

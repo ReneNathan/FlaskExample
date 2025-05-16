@@ -1,0 +1,146 @@
+/*Table*/
+.main_container {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 540px;
+  margin: 3rem auto;
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  overflow-x: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#table_autores {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#table_autores thead {
+  background-color: #004d99;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+#table_autores thead th {
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#table_autores tbody td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+#table_autores tbody tr:nth-child(even) {
+  background-color: #f4f8ff;
+}
+
+#table_autores tbody tr:hover {
+  background-color: #dbeeff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#table_autores_filter{
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.dataTables_length{
+  font-size: 1rem;
+}
+
+.dataTables_info, .dataTables_paginate{
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.action_table_menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.edit-action:hover{
+  color: #004d99;
+  cursor: pointer;
+}
+
+.delete-action:hover{
+  color: red;
+  cursor: pointer;
+}
+/*--------------------------------------------*/
+
+.btn_add_author{
+  background-color: #004d99;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn_add_author:hover{
+  background-color: #003a6c;
+}
+
+h1{
+  background-color: aliceblue;
+  padding: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Scroll suave em telas pequenas */
+@media (max-width: 600px) {
+  .main_container {
+    padding: 1rem;
+  }
+
+  #table_autores thead {
+    font-size: 0.8rem;
+  }
+
+  #table_autores tbody td {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .dataTables_info, .dataTables_paginate{
+    font-size: 0.8rem;
+  }
+
+  .main_container{
+    min-height: 500px;
+  }
+}
