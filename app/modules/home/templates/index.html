@@ -11,67 +11,69 @@
 <body>
     {% include 'include/upper_menu.html' %}
 
-    <div id="first_line_container">
-        {% include 'include/carrousel.html' %}
-        <div id="introduction_text_constiner">
-            <span>
-                Em um mundo cada vez mais digital e acelerado, a leitura de livros continua sendo uma das formas mais ricas de desenvolver a imaginação, empatia e pensamento crítico. Na "Tudo em Livros", celebramos o poder das histórias — do terror que arrepia à fantasia que encanta, da ficção que provoca reflexões ao romance que aquece o coração. Ler é escapar, sonhar e se conhecer. Descubra mundos incríveis em cada página e viva experiências que só os livros podem oferecer.
-            </span>
-        </div>
-    </div>
-    <div id="second_line_container">
-        <button class="btn_livro">Pegar um livro!</button>
-        <button class="btn_livro">Devolver um livro!</button>
-        <button id="btn_donate_book" class="btn_livro">Doar um livro!</button>
-    </div>
-
-    <section id="destaques_semana">
-        <h2>Destaques da Semana</h2>
-        <div class="cards_container">
-            <div class="card_livro">
-                <h3>"1984" - George Orwell</h3>
-                <p>Uma distopia poderosa sobre vigilância e liberdade.</p>
-            </div>
-            <div class="card_livro">
-                <h3>"Dom Casmurro" - Machado de Assis</h3>
-                <p>Clássico brasileiro que levanta questões sobre memória e ciúmes.</p>
+    <main class="content">
+        <div id="first_line_container">
+            {% include 'include/carrousel.html' %}
+            <div id="introduction_text_constiner">
+                <span>
+                    Em um mundo cada vez mais digital e acelerado, a leitura de livros continua sendo uma das formas mais ricas de desenvolver a imaginação, empatia e pensamento crítico. Na "Tudo em Livros", celebramos o poder das histórias — do terror que arrepia à fantasia que encanta, da ficção que provoca reflexões ao romance que aquece o coração. Ler é escapar, sonhar e se conhecer. Descubra mundos incríveis em cada página e viva experiências que só os livros podem oferecer.
+                </span>
             </div>
         </div>
-    </section>
+        <div id="second_line_container">
+            <button class="btn_livro">Pegar um livro!</button>
+            <button class="btn_livro">Devolver um livro!</button>
+            <button id="btn_donate_book" class="btn_livro">Doar um livro!</button>
+        </div>
 
-    <section id="generos_populares">
-        <h2>Explore por Gêneros</h2>
-        <ul class="generos_lista">
-            <li>📖 Ficção Científica</li>
-            <li>💘 Romance</li>
-            <li>🎭 Drama</li>
-            <li>🔍 Suspense</li>
-            <li>🧙‍♂️ Fantasia</li>
-            <li>👻 Terror</li>
-            <li>➕ E muitos outros</li>
-        </ul>
-    </section>
+        <section id="destaques_semana">
+            <h2>Destaques da Semana</h2>
+            <div class="cards_container">
+                <div class="card_livro">
+                    <h3>"1984" - George Orwell</h3>
+                    <p>Uma distopia poderosa sobre vigilância e liberdade.</p>
+                </div>
+                <div class="card_livro">
+                    <h3>"Dom Casmurro" - Machado de Assis</h3>
+                    <p>Clássico brasileiro que levanta questões sobre memória e ciúmes.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="relatorios_atividade">
-        <h2>Relatórios da Biblioteca</h2>
-        <p>Veja estatísticas fictícias sobre livros emprestados, devolvidos e doações recentes. Ideal para simular painéis administrativos em apps reais.</p>
-        <button class="btn_livro">Ver Relatórios</button>
-    </section>
+        <section id="generos_populares">
+            <h2>Explore por Gêneros</h2>
+            <ul class="generos_lista">
+                <li>📖 Ficção Científica</li>
+                <li>💘 Romance</li>
+                <li>🎭 Drama</li>
+                <li>🔍 Suspense</li>
+                <li>🧙‍♂️ Fantasia</li>
+                <li>👻 Terror</li>
+                <li>➕ E muitos outros</li>
+            </ul>
+        </section>
 
-    <section id="depoimentos">
-        <h2>O que dizem nossos leitores</h2>
-        <blockquote>“Achei incrível poder navegar por tantos livros! Pena que é só de brincadeira...” — Maria, estudante.</blockquote>
-        <blockquote>“Bem louco, empolgante!" - Estudande anônimo.</blockquote>
-        <blockquote>“As pessoas boas devem amar seus inimigos" - Seu Madruga.</blockquote>
-        <blockquote>“Luke, eu sou sei pai!" - Darth Vader.</blockquote>
-        <blockquote>“Não suporto esse tal de CSS" - Internet Explorer.</blockquote>
-        <blockquote>"...Mas é um navio que não afunda" - Tripulante do Titanic<blockquote>
-    </section>
+        <section id="relatorios_atividade">
+            <h2>Relatórios da Biblioteca</h2>
+            <p>Veja estatísticas fictícias sobre livros emprestados, devolvidos e doações recentes. Ideal para simular painéis administrativos em apps reais.</p>
+            <button class="btn_livro">Ver Relatórios</button>
+        </section>
 
-    <section id="projeto_estudo">
-        <h2>Este site é um projeto de estudo 🧠</h2>
-        <p>Esta aplicação foi desenvolvida unicamente com fins didáticos e como parte de um portfólio pessoal. Nenhuma funcionalidade de empréstimo, doação ou visualização de livros tem real funcionalidade.</p>
-    </section>
+        <section id="depoimentos">
+            <h2>O que dizem nossos leitores</h2>
+            <blockquote>“Achei incrível poder navegar por tantos livros! Pena que é só de brincadeira...” — Maria, estudante.</blockquote>
+            <blockquote>“Bem louco, empolgante!" - Estudande anônimo.</blockquote>
+            <blockquote>“As pessoas boas devem amar seus inimigos" - Seu Madruga.</blockquote>
+            <blockquote>“Luke, eu sou sei pai!" - Darth Vader.</blockquote>
+            <blockquote>“Não suporto esse tal de CSS" - Internet Explorer.</blockquote>
+            <blockquote>"...Mas é um navio que não afunda" - Tripulante do Titanic<blockquote>
+        </section>
+
+        <section id="projeto_estudo">
+            <h2>Este site é um projeto de estudo 🧠</h2>
+            <p>Esta aplicação foi desenvolvida unicamente com fins didáticos e como parte de um portfólio pessoal. Nenhuma funcionalidade de empréstimo, doação ou visualização de livros tem real funcionalidade.</p>
+        </section>
+    </main>
 
     {% include 'include/footer.html' %}
     {% include 'include/modal_donate_book.html' %}

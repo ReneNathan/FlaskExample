@@ -4,4 +4,12 @@ body{
   background-repeat: cover;
   background-position: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
