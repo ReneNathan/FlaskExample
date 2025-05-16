@@ -62,6 +62,131 @@
     gap: 1.5rem;
   }
 
+  /* Estilo geral das seções */
+section {
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    max-width: 1100px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos das seções */
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Cards para livros em destaque */
+.cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card_livro {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card_livro:hover {
+    transform: translateY(-5px);
+}
+
+.card_livro h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #005f73;
+}
+
+.card_livro p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Gêneros */
+.generos_lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.generos_lista li {
+    background-color: #e0f7fa;
+    color: #006064;
+    padding: 0.75rem 1.25rem;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.generos_lista li:hover {
+    background-color: #b2ebf2;
+}
+
+/* Botões padrão */
+.btn_livro {
+    background-color: #00838f;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn_livro:hover {
+    background-color: #006064;
+}
+
+/* Depoimentos */
+#depoimentos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+blockquote {
+    margin: 1rem auto;
+    font-style: italic;
+    text-align: center;
+    color: #444;
+    max-width: 700px;
+    line-height: 1.5;
+    border-left: 4px solid #00838f;
+    padding-left: 1rem;
+}
+
+/* Última seção (Aviso) */
+#projeto_estudo {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffeeba;
+    color: #856404;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#relatorios_atividade{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media (max-width: 992px) {
   #first_line_container{
     flex-direction: column;
